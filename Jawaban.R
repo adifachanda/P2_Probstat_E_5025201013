@@ -106,7 +106,35 @@
 
 #Nomor5
   #a
+  GTL <- read_csv("/Users/macbook/downloads/GTL.csv")
+  head(GTL)
+  str(GTL)
+
+  qplot(x = Temp, y = Light, geom = "point", data = GTL) +
+     facet_grid(.~Glass, labeller = label_both)
+
   #b
+  GTL$Glass <- as.factor(GTL$Glass)
+  GTL$Temp_Factor <- as.factor(GTL$Temp)
+  str(GTL)
+
+  anova <- aov(Light ~ Glass*Temp_Factor, data = GTL)
+  summary(anova)
+
   #c
+  data_summary <- group_by(GTL, Glass, Temp) %>%
+  summarise(mean=mean(Light), sd=sd(Light)) %>%
+  arrange(desc(mean))
+  print(data_summary)
+
   #d
+  tukey <- TukeyHSD(anova)
+  print(tukey)
+ 
   #e
+  tukey.cld <- multcompLetters4(anova, tukey)
+  print(tukey.cld)
+
+  cld <- as.data.frame.list(tukey.cld$`Glass:Temp_Factor`)
+  data_summary$Tukey <- cld$Letters
+  print(data_summary)
