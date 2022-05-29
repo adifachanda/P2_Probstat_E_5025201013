@@ -2,7 +2,7 @@
 
 ## No 1
 ## No 2
-1.  Tidak setuju
+1.  Setuju
 2.  Hasil Output
 [![NO2](https://cdn.discordapp.com/attachments/949602435100467230/980442280315990056/Screen_Shot_2022-05-29_at_18.59.34.png)](https://nodesource.com/products/nsolid)
     - null hypothesis:
