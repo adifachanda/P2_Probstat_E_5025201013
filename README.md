@@ -1,17 +1,17 @@
-# P2_Probstat_E_5025201013
+#P2_Probstat_E_5025201013
 
 ## No 1
 Memasukkan data dan menampilkan data dengan menggunakan data frame, hasil dari data
-![data](https://cdn.discordapp.com/attachments/949602435100467230/980448097714978866/Screen_Shot_2022-05-29_at_19.27.37.png)
+![data](https://cdn.discordapp.com/attachments/949602435100467230/980502134174937088/Screen_Shot_2022-05-29_at_23.03.19.png)
 
 1. Standar Deviasi dari data selisih pasangan pengamatan tabel diatas, standar deviasi sebelum dan sesudah adalah berikut
-![data](https://cdn.discordapp.com/attachments/949602435100467230/980448097362669588/Screen_Shot_2022-05-29_at_19.29.46.png)
-maka selisihnya adalah 6.835107
+![data](https://cdn.discordapp.com/attachments/949602435100467230/980502133940051998/Screen_Shot_2022-05-29_at_23.03.40.png)
+maka selisihnya adalah 4.967528
 
 2. Hasil dari t-test
-![t-test](https://cdn.discordapp.com/attachments/949602435100467230/980450256540024872/Screen_Shot_2022-05-29_at_19.38.38.png)
+![t-test](https://cdn.discordapp.com/attachments/949602435100467230/980502133554167808/Screen_Shot_2022-05-29_at_23.04.17.png)
 3. Komperasikan dua variabel dengan menggunakan `var.test` dan `t.test`meggunakan untuk melihat signifikan
-![pwebandingan](https://cdn.discordapp.com/attachments/949602435100467230/980450880727961660/Screen_Shot_2022-05-29_at_19.41.05.png)
+![pwebandingan](https://cdn.discordapp.com/attachments/949602435100467230/980502133172473946/Screen_Shot_2022-05-29_at_23.04.38.png)
 Dari gambar di atas dilihat bahwa convidence dan mean sama dengan 1b, yang berbeda adalah p-value dan df. Jadi, dapat disimpulkan bahwa tidak memiliki pengaruh yang signifikan secara statistika
 
 ## No 2
@@ -91,9 +91,28 @@ dapat dilihat dari gambar di atas dan di bawah dari nilai p yang didapatkan satu
 ![4f](https://cdn.discordapp.com/attachments/949602435100467230/980487625649553488/Screen_Shot_2022-05-29_at_21.58.42.png)
 
 ## No 5
+1. Plot sederhana untuk visualisasi data
+Memuat file data
+![5a](https://cdn.discordapp.com/attachments/949602435100467230/980498243072950292/Screen_Shot_2022-05-29_at_22.37.19.png)
+Membuat plot sederhana
+![5a](https://cdn.discordapp.com/attachments/949602435100467230/980498242842288189/Screen_Shot_2022-05-29_at_22.40.47.png)
 
+2. Uji ANOVA dua arah
+Untuk tabel ANOVA, perlu memiliki variabel independen dalam file data yang didefinisikan sebagai faktor. Untuk Glass, yang awalnya didefinisikan sebagai karakter, akan diubah menjadi faktor. Untuk suhu, yang merupakan variabel numerik,  akan menduplikasinya, membuat variabel baru, Temp_Factor, yang didefinisikan sebagai faktor.
+![5b](https://cdn.discordapp.com/attachments/949602435100467230/980498242569646150/Screen_Shot_2022-05-29_at_22.41.28.png)
+melakukan analisis varians menggunakan fungsi aov()
+![5b](https://cdn.discordapp.com/attachments/949602435100467230/980498242150207518/Screen_Shot_2022-05-29_at_22.42.01.png)
 
+3. Tabel dengan mean dan standar deviasi keluaran cahaya
+Saat membuat tabel, akan mengatur cara dalam urutan menurun, yang akan diperlukan untuk menambahkan huruf superskrip dari tes Tukey
+![5c](https://cdn.discordapp.com/attachments/949602435100467230/980498241760153631/Screen_Shot_2022-05-29_at_22.43.29.png)
 
+4. Uji Tukey
+Perbandingan rata-rata dengan uji Tukey dapat dijalankan pada objek yang dihasilkan dari analisis varians
+![5d](https://cdn.discordapp.com/attachments/949602435100467230/980498241760153631/Screen_Shot_2022-05-29_at_22.43.29.png)
 
-
-
+5. compact letter display 
+Menggunakan fungsi multcompLetters4() dari multcompViewpaket.
+![5e](https://cdn.discordapp.com/attachments/949602435100467230/980498240967434250/Screen_Shot_2022-05-29_at_22.45.22.png)
+Mengekstrak dan menambahkan hasil tampilan huruf kompak untuk setiap perlakuan ke tabel dengan ringkasan data.
+![5e](https://cdn.discordapp.com/attachments/949602435100467230/980498240682201088/Screen_Shot_2022-05-29_at_22.48.55.png)
