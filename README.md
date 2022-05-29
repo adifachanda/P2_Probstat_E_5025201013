@@ -1,4 +1,4 @@
-#P2_Probstat_E_5025201013
+# P2_Probstat_E_5025201013
 
 ## No 1
 Memasukkan data dan menampilkan data dengan menggunakan data frame, hasil dari data
